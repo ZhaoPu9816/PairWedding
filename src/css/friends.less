@@ -1,0 +1,315 @@
+.fly-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+// rest
+.leave {
+    padding: 60px 0;
+}
+
+// TOP
+.first {
+    background-image: url(../images/friends/friends-page-banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.seconfri {
+    background-image: url(../images/friends/friends-2-page-banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.rsvp-form-area {
+    background-image: url(../images/friends/rsvp-page-banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner-area {
+    height: 420px;
+    .setion-over {
+        background-color: rgba(16,17,39,.7);
+        height: 100%;
+        width: 100%;
+        .container {
+            height: 100%;
+            // width: 400px;
+            position: relative;
+            .title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                .main-title {
+                    font-size: 56px;
+                    color: white;
+                    font-style: italic;
+                    line-height: 55px;
+                    font-family: "华文隶书";
+                }
+                .home-locations {
+                    font-size: 22px;
+                    .home {
+                    color: #ff4061;
+                    font-size: 22px;
+                    }
+                    span{
+                        color: #fff;
+                    }
+                    .location {
+                        color: white;
+                        font-size: 22px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+// 轮播 模块carousel
+.friends-area {
+    background-image: url(../images/friends/friend-says-slide-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .section-overlay {
+        padding: 80px 0;
+        background-color: rgba(255,64,97, .80);
+        .title {
+            color: #fff;
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-style: italic;
+            font-family: "华文隶书";
+        }
+        .container {
+            .carousel {
+                margin: 0 115px;
+                position: relative;
+                text-align: center;  
+                overflow: hidden;             
+                /deep/ .el-carousel__container {
+                    min-height: 390px;
+                    .el-carousel__arrow {
+                        width:56px;
+                        height: 56px;
+                        border: 1px solid #fff;
+                    }                  
+               }
+               /deep/  .el-carousel__button {
+                height: 8px;
+                border-radius: 4px;
+                }
+            }           
+            .h2 {
+                color: #fff;
+                font-size: 32px;
+                padding: 46px 0 23px;
+                font-family: "华文隶书";
+            }
+            .h3 {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 100;
+            }
+            .friend-says-img {
+                height: 188px;
+                width: 188px;
+                padding-top:20px;
+                margin: 0 auto;
+                position: relative;
+                .backticks {
+                    width: 58px;
+                    height: 58px;
+                    background: #fff;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 80%;
+                    right: 0;
+                    img:hover {
+                        background-color: rgba(255,64,97, .80);
+                    }
+                }
+                img {
+                    border-radius: 50%;
+                    border: 5px solid #fff;
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+}
+.el-carousel {
+    .el-carousel__button {
+        width: 23px;
+        height: 9px;
+        border-radius: 4px;
+        background: #000;
+    }
+}
+
+// 8边行模块
+.container {     
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.frimode {
+    margin-top: 80px;
+}
+.coteng-box{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+.scond-style .coteng{
+    // background: violet;
+    width: 25%;
+    padding: 0 15px;
+    .single-friend .friend-box .friend-photo-box  {
+        overflow: unset;
+    }
+    .single-friend {
+        box-shadow: 0 2px 7px 2px rgba(16,17,39,.1);
+    }
+}
+.coteng {
+    // display: inline-block;
+    width: 25%;
+    padding: 0 15px;
+}
+.single-friend {
+    margin-bottom: 30px;
+    padding-bottom: 34px;
+    // background: forestgreen;
+    .friend-box {
+        overflow: hidden;
+        min-height: 200px;
+        .friend-photo-box {
+        transform: rotate(44deg);
+        overflow: hidden;
+        .friend-p-wrap {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        div img:hover {
+            transform:rotate(-44deg) scale(1.05);
+        }
+        img {
+            width: 100%;
+            transition: all 1.5s;
+            transform: rotate(-44deg) scale(1.2);           
+        }
+        } 
+    }
+    .friend-content {
+        font-size: 16px;
+        ul{
+            display: inline-block;
+        }
+        .luck {
+            color: #101127;
+            font-size: 28px;
+            margin-top: 30px;
+            font-family: "华文隶书";
+        }
+        .identify {
+            padding: 2px 0 13px;
+            color: #777c87;
+        }
+        .icon-fri {
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 50%;
+            border: 1px solid #777c87;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .icon-fri:hover {
+            color: #ff4061;
+            border-color: #ff4061;
+        }
+    }
+    
+} 
+
+// 底部小轮播
+.main-plan {
+    padding: 80px 0;
+    // background: #777c87;
+    text-align: center;
+    .h2 {
+        margin-bottom: 25px;
+        color: #ff4061;
+        font-size: 48px;
+        font-style: italic;
+        font-family: "华文隶书";
+    }
+    .neque {
+        color: #777c87;
+        font-size: 16px;
+        font-weight: 400;
+        width: 67%;
+        line-height: 30px;
+        margin: 15px auto 60px;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .coteng-box{
+       max-width: 1140px; 
+    }
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .coteng-box{
+        max-width: 960px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .single-friend .friend-box .friend-photo-box {
+        overflow: unset;
+    }
+    .coteng-box{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 120px 0;
+        .coteng{
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .coteng-box{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 70px 0;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .banner-area {
+        height: 330px;
+    }
+    .coteng-box{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0 0;
+        .coteng{
+        width: 100%;
+        }
+    }
+    .friends-area .section-overlay .container {
+    
+    .h3{
+        font-size: 16px;
+    }
+    .carousel {
+        margin: 0 20px;
+        }
+    }
+}

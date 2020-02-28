@@ -1,0 +1,430 @@
+*{
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: all 0.3s ease-out;
+}
+a{
+	/* color: #555; */
+  text-decoration: none;
+  cursor: pointer;
+}
+li{
+	list-style: none;
+}
+p {
+  font-style: normal;
+}
+/*让此div的内部div从左右开始平分此div  不换行*/
+.flex-betwe{
+	display: flex;
+	justify-content: space-between;
+}
+/*让此div的内部div从中间开始平分此div  不换行*/
+.flex-center{
+	display: flex;
+	justify-content: center;
+}
+/*让此div的内部div从中间开始按默认比例占满此div  不换行*/
+.flex-around{
+	display: flex;
+	justify-content: space-around;
+}
+/*让此div的内部div从左右开始平分此div  超出则换行*/
+.flex-betwe-w{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+/*让此div的内部div从中间开始平分此div  超出则换行*/
+.flex-center-w{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/*让此div的内部div从中间开始按默认比例占满此div  超出则换行*/
+.flex-around-w{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.flex {
+  display: flex;
+}
+.lr-center{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.lrtb-center{
+  position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.tb-center{
+	top: 50%;
+	transform: translate(0,-50%);
+}
+.fontc-blue{
+	color: #2a95de;
+}
+.fontc-white{
+	color: white;
+}
+.fontc-ccc{
+	color: #ccc;
+}
+.fonts-14{
+	font-size: .14rem;
+}
+.fonts-20{
+	font-size: .2rem;
+}
+/*超过隐藏*/
+.overflow{
+	overflow: hidden;
+	white-space: nowrap;
+}
+/*超出一行隐藏显示省略号*/
+.overflow-1{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*添加手型*/
+.cursor-poi{
+	cursor: pointer;
+}
+/*清除浮动*/
+.clearfix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+/*左浮动*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/* 从中心切换按钮颜色 */
+.btn-center-slide{
+    color: white;
+    /*margin: 5px 0;*/
+    padding: 0 20px;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s color 0s;
+    cursor: pointer;
+}
+.btn-center-slide:hover:after{
+    width: 100%;
+    left: 0;
+}
+.btn-center-slide:hover{
+    color: black;
+}
+.btn-center-slide:after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    left: 50%;
+    background: #f2f2f2;
+    height: 100%;
+    width: 0;
+    top: 0;
+    transition: all ease-out 0.3s;
+}
+/* 从角落切换按钮颜色 */
+.btn-corner-slide{
+	cursor: pointer;
+    cursor: pointer;
+    color: white;
+    padding: .05rem .2rem;
+    font-size: .16rem;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s color 0s;
+}
+.btn-corner-slide:hover{
+    color: white;
+}
+.btn-corner-slide:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #383838;
+}
+.btn-corner-slide:hover::after{
+    bottom: 100%;
+    right: 100%;
+}
+
+/*初始模块*/
+div.hideitem{
+	transform: rotateX(-90deg);
+	opacity: 0;
+}
+div.scrollslide{
+	transition: all 1s ease-out;
+	transform: rotateX(0);
+	opacity: 1;
+}
+
+
+
+/*轮播圆点*/
+.fly-dot-box{
+	text-align: center;
+	transition: 300ms;
+	transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+.fly-dot-box .fly-dot-list{
+	width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 8px;
+	cursor: pointer;
+}
+.fly-dot-box .fly-dot-list:before {
+    background: #d8d8d8;
+}
+.fly-dot-box .fly-dot-list-active:before {
+    background: #ef8200;
+}
+
+.fly-dot-list:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-top: -3px;
+    margin-left: -3px;
+    transition: ease .6s;
+}
+
+.fly-dot-list:after{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #ef8200;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    transition: ease .6s;
+    transform: scale(0);
+}
+/*.fly-carousel-outer .fly-dot-box.radius .fly-dot-list:after{
+	margin-left: -13px;
+    margin-top: -13px;
+}*/
+.fly-dot-list-active:after {
+    transform: scale(1);
+}
+.back-body {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.dis-fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+i.arrow {
+  text-indent: 0;
+  position: absolute;
+  line-height: 56px;
+  font-size: 20px;
+  left: 220px;
+  top: 0;
+  transition: all 0.3s ease-out;
+}
+i.arrow.rotate {
+  transform: rotate(180deg);
+}
+.checkbox {
+  appearance: none;
+  /* background: #ccc; */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  background-image: radial-gradient(circle at 12px 12px, #ccc 44%, rgba(160, 160, 160, 1));
+  position: relative;
+}
+.checkbox:checked::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '\2714';
+  color: white;
+  text-align: center;
+  background: cornflowerblue;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.overflow-no{
+	overflow: hidden;
+	white-space: nowrap;
+}
+/*超出一行隐藏显示省略号*/
+.overflow-1{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+// 清除浮动
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+// 边距封装
+.generate-columns(8,1);
+.generate-columns(@n, @i: 1, @count: 5 * @i) when (@i =< @n){
+  // 上下左右 例padding-10
+  .padding-@{count} {
+    padding: @i * 5px;
+  }
+  // 左 例padding-l-10
+  .padding-l-@{count} {
+    padding-left: @i * 5px;
+  }
+  // 右
+  .padding-r-@{count} {
+    padding-right: @i * 5px;
+  }
+  // 上
+  .padding-t-@{count} {
+    padding-top: @i * 5px;
+  }
+  // 下
+  .padding-b-@{count} {
+    padding-bottom: @i * 5px;
+  }
+  // 左右
+  .padding-lr-@{count} {
+    padding: 0 @i * 5px;
+  }
+  // 上下
+  .padding-tb-@{count} {
+    padding: @i * 5px 0;
+  }
+  // margin   上下左右
+  .margin-@{count} {
+    margin: @i * 5px;
+  }
+  // 左
+  .margin-l-@{count} {
+    margin-left: @i * 5px;
+  }
+  // 右
+  .margin-r-@{count} {
+    margin-right: @i * 5px;
+  }
+  // 上
+  .margin-t-@{count} {
+    margin-top: @i * 5px;
+  }
+  // 下
+  .margin-b-@{count} {
+    margin-bottom: @i * 5px;
+  }
+  // 左右
+  .margin-lr-@{count} {
+    margin: 0 @i * 5px;
+  }
+  // 上下
+  .margin-tb-@{count} {
+    margin: @i * 5px 0;
+  }
+  .generate-columns(@n, (@i + 1))
+}
+// 字体封装 例font-12
+.font-sizes(12, 6);
+.font-sizes(@font, @n, @size: 2 *@n) when (@n <= @font) {
+  .font-@{size} {
+    font-size: @size * 1px;
+  }
+  .font-sizes(@font, @n+1)
+}
+.font-30{
+  font-size: 30px;
+}
+.font-32{
+  font-size: 32px;
+}
+.font-36{
+  font-size: 36px;
+}
+.color-main{
+  color: #101127
+}
+.color-fff{
+  color: #fff;
+}
+.color-333{
+  color: #333;
+}
+
+
+
+.gang-coontent {
+  width: 1140px;
+}
+@media screen and (max-width: 1200px) {
+  .gang-coontent {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .gang-coontent {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .gang-coontent {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gang-coontent {
+    width: 100%;
+  }
+}

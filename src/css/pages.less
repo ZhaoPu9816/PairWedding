@@ -1,0 +1,167 @@
+.width100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.page-area{
+  padding: 30px 0 50px;
+}
+.galleryclassic {
+  width: 100%;
+  height: 420px;
+  padding-top: 80px;
+  background: url(../images/pages/classic-gallery-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.galleryclassic-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16,17,39,.7);
+}
+
+.page-banner-wrap {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.page-banner-wrap h1 {
+  visibility: visible;
+  animation-duration: 1.2s;
+  animation-delay: 0.5s;
+  animation-name: fadeInUp;
+  font-size: 60px;
+  font-weight: 400;
+  font-family: "华文隶书";
+}
+
+.page-banner-wrap h3 {
+  font-size: 20px;
+  font-family: "fixedsys";
+}
+
+.page-banner-wrap a {
+  color: #ff6e87;
+}
+
+.page-banner-wrap span {
+  padding: 0 13px;
+}
+
+.no-found {
+  background-image: url(../images/pages/404-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 6rem;
+}
+
+.no-found-bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(16,17,39,.7);
+}
+
+.not-found-content {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 6px dotted #fff;
+  padding: 10px; 
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found-content h1 {
+  font-family: "FZShuTi";
+  font-size: 60px;
+  color: #ff4061;
+}
+
+.not-found-content h4 {
+  font-family: "华文隶书";
+  font-size: 28px;
+  width: 70%;
+  margin: 0 auto;
+  color: #fff;
+  margin-top: 20px;
+}	
+
+.no-found-button {
+  font-size: 16px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, 0);
+  padding: 10px 15px;
+  border: 2px solid #ff4061;
+  border-radius: 5px;
+  background-color: #ff4061;
+}
+
+.no-found-button:hover {
+  transition: all 1s;
+  box-shadow: 0 0 5px #ff4061;
+  color: black;
+  border: 2px solid #fff;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 750px) {
+  .galleryclassic {
+    height: 376px;
+    padding-top: 57px;
+  }
+  .page-banner-wrap h1 {
+    font-size: 80px;
+  }
+  .page-banner-wrap h3 {
+    font-size: 18px;
+  }
+  .not-found-content {
+    width: 250px;
+    height: 250px;
+  }
+  .no-found-button {
+    padding: 6px 8px;
+	font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .not-found-content {
+    width: 150px;
+    height: 150px;
+  }
+  .not-found-content h1{
+    font-size: 30px;
+  }
+  .not-found-content h4{
+    font-size: 12px;
+  }
+  .no-found-button{
+    padding: 0px 8px;
+    font-size: 10px;
+  }
+}

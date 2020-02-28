@@ -1,0 +1,363 @@
+.publictab-content{
+  padding:.8rem 0 .5rem;
+  width:100%;
+  .el-tabs__nav-wrap::after{
+    content: none;
+  }
+  .publictab-content-title{
+    h2{
+      &.section-hender{
+        font-size:40px;
+        margin-bottom:10px;
+        line-height:30px;
+        color:#ff4061;
+        font-family: "CommercialScript BT";
+        margin-bottom:10px;
+      }
+    }
+    h3{
+      &.publictab-content-detaile{
+        color:#777c87;
+        font-weight:400;
+        width:67%;
+        margin:.15rem 1.6rem .6rem;
+        line-height:.3rem;
+      }
+    }
+  }
+  .el-tabs__nav-scroll{
+      
+    }
+    .el-tabs__active-bar{
+      text-align: center;
+      background-color:#ff4061;
+    }
+    .el-tabs__item{
+      color:#101127;
+      &.is-active{
+        color:#ff4061;
+      }
+    }
+}
+.groom-area-news,.module-store{
+  padding: 80px 0;
+}
+// Tab内容
+.public-tab-content{
+  position: relative;
+  height:100%;
+  width:100%;
+  overflow: hidden;
+  margin-left:.52rem;
+  .img-box{
+    position: absolute;
+    top:3.4rem;
+    right:5.2rem;
+    overflow: hidden;
+    box-shadow:0 0 .16rem .02rem rgba(0, 0, 0, .2);
+    margin: .2rem 0;
+    width:3.50rem;
+    &.small-img{
+      height:310px;
+    }
+    &.img-box4{
+    position: absolute;
+    top:3.4rem;
+    right:5.20rem;
+    overflow: hidden;
+    width:3.50rem;
+    box-shadow:0 0 .16rem .02rem rgba(0, 0, 0, .2);
+   }
+   img{
+      height:100%;
+      width: 100%;
+      vertical-align: middle;
+      border-style: none;
+      transition:all 1s;
+      transform: scale(1.15);
+      &.img{
+        max-width:100%;
+        height:100%;
+        display: block;
+      }
+      }
+      .gallery-tab{
+        position: absolute;
+        top:0;
+        left: 0;
+        height:100%;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:rgba(255, 67, 97, 0.7);
+        opacity:0;
+        span{
+           font-size:.5rem;
+           color:#fff;
+        }
+      }
+  }
+  .position-reletive{
+    position: relative;
+    .story-photo-box{
+      position: relative;
+      overflow: hidden;
+      box-shadow:0 0 .16rem 0.02rem rgba(0, 0, 0, .2);
+      margin:.15rem .2rem;
+      width:3.50rem;
+      &.big-img{
+        height:650px;
+      }
+      &.small-img{
+        height:310px;
+      }
+      &.public-img{
+        position: absolute;
+        left:0.0rem;
+        bottom:10px;
+        width:3.50rem;
+        &.small-img{
+          height:310px;
+      }
+      }
+      &.public-img4{
+        position: absolute;
+        left:-0.10rem;
+        top:3.8rem;
+        width:3.50rem;
+      }
+      img{
+          height:100%;
+          vertical-align: middle;
+          border-style: none;
+          transition:all 1s;
+          transform: scale(1.15);
+          width:360px;
+          &.img{
+            max-width:100%;
+            height:100%;
+            display: block;
+          }
+      }
+      .gallery-tab{
+        position: absolute;
+        top:0;
+        left: 0;
+        height:100%;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:rgba(255, 67, 97, 0.7);
+        opacity:0;
+        span{
+           font-size:50px;
+           color:#fff;
+        }
+      }
+    }
+  }
+  .story-photo-box:hover .img,
+  .img-box:hover .img{
+      transform: scale(0.99);
+  }
+  .story-photo-box:hover .gallery-tab,
+  .img-box:hover .gallery-tab{
+    opacity:0.6;
+  }
+}
+.public-tab-content-two{
+  display: none;
+  padding: .5rem 0 .2rem .3rem;
+  .tab-content-lists li{
+    width:40%;
+    margin-left:25px;
+    float: left;
+    img{
+      width:100%;
+      height:100%;
+      vertical-align: middle;
+      border-style: none;
+      transition:all 1s;
+      transform: scale(1.15);
+    }
+    .position-reletive{
+      position: relative;
+      &.big-img{
+        height:392px;
+      }
+      &.small-img{
+        height:187px;
+      }
+    }
+    .gallery-tab-two{
+      position: absolute;
+      top:0;
+      left: 0;
+      height:100%;
+      width:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:rgba(255, 67, 97, 0.7);
+      opacity:0;
+      span{
+          font-size:50px;
+          color:#fff;
+      }
+    }
+  }
+  .tab-content-lists li:hover img{
+       transform: scale(0.99);
+  }
+   .tab-content-lists li:hover .gallery-tab-two{
+      opacity:0.6;
+  }
+}
+.module-store{
+  background:#f9f9f9;
+}
+// Bride顶部
+.Brid-groom-content{
+  height:500px;
+  background: url(../images/gallery/bride-groom-banner-bg.jpg) no-repeat center;
+  background-size: cover;
+  &.Brid-img{
+     height:500px;
+     background: url(../images/gallery/gallery-page-bg.jpg) no-repeat center;
+     background-size: cover;
+  }
+  &.CGpage-img{
+     height:500px;
+     background: url(../images/gallery/classic-gallery-bg.jpg) no-repeat center;
+     background-size: cover;
+  }
+  .Brid-groom-area{
+    background-color: rgba(16, 17, 39, .7);
+    width:100%;
+    height:100%;
+    display: flex;
+    .container{
+      max-width:1140px;
+      padding-right:15px;
+      padding-left:15px;
+      margin-right:auto;
+      margin-left:auto;
+      .container-wrap{
+        height:100%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        color:#fff;
+        h1{
+          font-size:.6rem;
+          font-family: "华文隶书";
+          font-weight:400;
+        }
+        .container-wrap-lists{
+          a{
+            font-size:.22rem;
+            color:#ff6e87;
+          }
+          .container-wrap-list{
+            font-size:.22rem;
+            &.active{
+              color:#fff;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+//Bridebanner
+.banner-wadding-content{
+  margin-top:40px;
+  .wadding-content-wrapper{
+    background: url(../images/gallery/wedding-events-bg.jpg) no-repeat center;
+    background-size: cover;
+    font-size:14px;
+    .section-wadding-content{
+      background-color: rgba(16, 17, 39, .80);
+      padding:.8rem 0;
+      height:100%;
+      width:100%;
+      
+      h2{
+        font-family: "CommercialScript BT";
+        color:#fefefe;
+        font-size:40px;
+        margin-bottom:30px;
+      }
+     h3{
+        color:#fefefe;
+        width:67%;
+        font-weight:400;
+        line-height:30px;
+        margin:15px auto 60px;
+        font-size:24px;
+        font-family: "CommercialScript BT";
+     }
+     
+    }
+    .swiper-slide{
+      position: relative;
+      .surface-content{
+        position: absolute;
+        top:9.5%;
+        left:10%;
+        width:80%;
+        height:80%;
+        background:rgba(255, 64, 97, 0.7);
+        text-align: center;
+        color:#fff;
+        padding:1rem .4rem 0 .4rem;
+        h4{
+          font-size:.24rem;
+          border-bottom:0.01rem solid #fff;
+          font-family: "CommercialScript BT";
+          padding-bottom:5px;
+        }
+        .surface-content-title{
+          margin-top:.15rem;
+        }
+        p{
+          margin-top:.15rem;
+          color:#fefefe;
+        }
+      }
+    }
+    .swiper-slide{
+      transition:1s;
+      transform: scale(0.85);
+    }
+    .swiper-slide-active,.swiper-slide-duplicate-active {
+      position: relative;
+      overflow: hidden;
+      transform: scale(1.1);
+    }
+  }
+}
+@media only screen and (max-width:900px) and (min-width:768px){
+  .surface-content{
+    display: none;
+  }
+  .groom-area-news,.module-store{
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width:992px)  {
+  .public-tab-content{
+    display: none;
+  }
+  .public-tab-content-two{
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .groom-area-news, .module-store{
+    padding: 0;
+  }
+}
